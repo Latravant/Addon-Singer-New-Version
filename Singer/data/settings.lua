@@ -13,13 +13,24 @@ return {
         ["ambuscade4"] = L{'Blade Madrigal', 'Honor March',  "Victory March", "Valor Minuet V",},
         ["shinryu"] = L{'Blade Madrigal', 'Honor March',  'Valor Minuet V', 'Dark Carol', 'Herculean Etude',},
         ["shinryu4"] = L{'Blade Madrigal', 'Honor March',  'Valor Minuet V', 'Dark Carol',},
+        -- ody ADD BY Author: Aragan 
+        --T1
+        ["Dealan-dhe"] = L{"Sentinel's Scherzo", 'Honor March',"Valor Minuet IV",  'Valor Minuet V', "Victory March",},
+        --Gogmagog BRD: SV March, Honor March, Scherzo, Minuet, Dirge (on DD), Sirvente (on RUN)
+        ["Gogmagog"] = L{"Adventurer's Dirge",'Honor March',"Sentinel's Scherzo", 'Valor Minuet V', "Victory March",},
         --T2
         ["Procne"] = L{"Valor Minuet IV",'Honor March',"Knight's Minne IV", 'Valor Minuet V', "Blade Madrigal",},
+        -- Procne BRD: Minx dirge HM DD, Schrezo Sirvantee Ballad once tank Dispel
         ["Procne2"] = L{"Adventurer's Dirge",'Honor March',"Sentinel's Scherzo", 'Valor Minuet V', "Blade Madrigal",},
+        ["Aristaeus"] = L{"Victory March",'Honor March',"Valor Minuet IV", 'Valor Minuet V', "Knight's Minne IV",},
+        --Henwen BRD: SV Minuet x2, March, Honor March, Dirge (on DD), Sirvente (on Tank)
+        ["Henwen"] = L{"Adventurer's Dirge",'Honor March',"Valor Minuet IV", 'Valor Minuet V', "Victory March",},
+        --Gigelorum BRD: SV Minuet x2, March, Honor March, Dirge (on DD), Sirvente (on Tank)
+        ["Gigelorum"] = L{"Adventurer's Dirge",'Honor March',"Valor Minuet IV", 'Valor Minuet V', "Victory March",},
 
         --Odyssey V25 ADD BY Author: Aragan 
-        ["mboze"] = L{'Valor Minuet IV','Sentinel\'s Scherzo', 'Honor March', 'Earth Carol II',  'Valor Minuet V'},
-        ["mboze2"] = L{'Valor Minuet IV','Sentinel\'s Scherzo', 'Honor March', 'Blade Madrigal', 'Valor Minuet V',},
+        ["mboze"] = L{'Valor Minuet IV',"Sentinel's Scherzo", 'Honor March', 'Earth Carol II',  'Valor Minuet V'},
+        ["mboze2"] = L{'Valor Minuet IV',"Sentinel's Scherzo", 'Honor March', 'Blade Madrigal', 'Valor Minuet V',},
         
         --[[MBOZE PLAN BRD: SV Honor March, Minuet x4. HM/Minnes/Ballads for PLD and WHM. 
           WHM will not be taking much damage at all here, 

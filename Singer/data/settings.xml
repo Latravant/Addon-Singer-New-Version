@@ -4,12 +4,12 @@
         <actions>false</actions>
         <active>false</active>
         <aoe>
-            <p1>true</p1>
-            <p2>true</p2>
-            <p3>true</p3>
-            <p4>true</p4>
-            <p5>true</p5>
-            <party>true</party>
+            <p1>false</p1>
+            <p2>false</p2>
+            <p3>false</p3>
+            <p4>false</p4>
+            <p5>false</p5>
+            <party>false</party>
         </aoe>
         <box>
             <bg>
@@ -77,17 +77,18 @@
         <troubadour>false</troubadour>
     </global>
     <aragan>
-        <aoe>
-            <party>false</party>
-        </aoe>
+        <actions>true</actions>
+        <active>true</active>
         <box>
             <pos>
-                <x>888</x>
-                <y>153</y>
+                <x>964</x>
+                <y>42</y>
             </pos>
+            <text>
+                <fonts>
+
+                </fonts>
+            </text>
         </box>
-        <ccsv>true</ccsv>
-        <debuffing>true</debuffing>
-        <nitro>true</nitro>
     </aragan>
 </settings>

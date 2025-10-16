@@ -59,7 +59,7 @@ setting = T{
 local song_debuffs = {
     ['Carnage Elegy'] = true,
     ['Pining Nocturne'] = true,
-    ['Foe Requiem VII'] = true,
+    -- ['Foe Requiem VII'] = true,
 }
 local save_file
 
@@ -257,19 +257,24 @@ function do_stuff()
 
         if settings.debuffing then
             local targ = windower.ffxi.get_mob_by_target('bt')
-
+        
             if targ and targ.hpp > 0 and targ.valid_target and targ.distance:sqrt() < 20 then
                 for song in setting.debuffs:it() do
                     local effect
-                    for k,v in pairs(get.debuffs) do
+                    for k, v in pairs(get.debuffs) do
                         if table.find(v, song) then
-                            effect =  k
+                            effect = k
                             break
                         end
                     end
-
-                    if effect and (not debuffed[targ.id] or not debuffed[targ.id][effect]) and spell_recasts[get.song_by_name(song).id] == 0 then
-                        cast.MA(song,'<bt>')
+        
+                    -- التحقق مما إذا كان الهدف قد تأثر بالفعل بالتعويذة
+                    if effect and (not debuffed[targ.id] or not debuffed[targ.id][effect]) then
+                        if spell_recasts[get.song_by_name(song).id] == 0 then
+                            cast.MA(song, '<bt>')
+                            debuffed[targ.id] = debuffed[targ.id] or {}
+                            debuffed[targ.id][effect] = true
+                        end
                         break
                     end
                 end
