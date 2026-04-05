@@ -44,7 +44,7 @@ function cast.check_song(song_list,targ,buffs,spell_recasts,recasts,JA_WS_lock,r
                         timers[targ][song].sv = false
                     end
                 end
-                cast.JA('input /ja \"Soul Voice \" <me>')
+                cast.JA('input /ja "Soul Voice" <me>')
             elseif ta == '<me>' and settings.nitro and not JA_WS_lock and not buffs.nightingale and recasts[109] <= 0 and recasts[110] <= 0 then
                 cast.JA('input /ja "Nightingale" <me>')
             elseif ta == '<me>' and settings.nitro and not JA_WS_lock and not buffs.troubadour and recasts[110] <= 0 then

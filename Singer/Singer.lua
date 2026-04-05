@@ -47,7 +47,6 @@ setting = T{
         firestorm = L{},
         aurorastorm = L{},
     },
-    debuffs = L{},
     debuffs = L{"Carnage Elegy","Pining Nocturne",},
     dummy = L{"Puppet's Operetta","Scop's Operetta","Shining Fantasia",},
     songs = L{"Honor March","Victory March","Valor Minuet V","Valor Minuet IV",},
@@ -107,6 +106,7 @@ end
 
 del = 0
 counter = 0
+lastcoord = ''
 timers = {AoE={}, buffs={}}
 party = get.party()
 buffs = get.buffs()
@@ -197,7 +197,7 @@ function do_stuff()
 
         local JA_WS_lock = buffs.amnesia or buffs.impairment
       
-        if use_ws and not JA_WS_lock and play.status == 1 then
+        if settings.use_ws and not JA_WS_lock and play.status == 1 then
             local targ = windower.ffxi.get_mob_by_target('t')
             local goal_tp
             if not times['aftermath: lv.3'] or os.time() - times['aftermath: lv.3'] <= 5 then
@@ -418,7 +418,7 @@ handled_commands = T{
 
 short_commands = {
     ['p'] = 'pianissimo',
-    ['n'] = 'nightingale',
+    ['ng'] = 'nightingale',
     ['t'] = 'troubadour',
     ['n'] = 'nitro',
     ['cc'] = 'CCSV',

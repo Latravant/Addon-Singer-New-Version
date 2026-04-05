@@ -156,7 +156,7 @@ function song_timers.buff_lost(targ_id,buff_id)
 
     if buff then
         local targ = windower.ffxi.get_mob_by_id(targ_id)
-        if not targ.name then return end
+        if not targ or not targ.name then return end
         if not timers[targ.name] then return end
 
         local minimum,song
@@ -173,7 +173,7 @@ function song_timers.buff_lost(targ_id,buff_id)
 			local party = windower.ffxi.get_party()
 			
 			for slot in get.party_slots:it() do
-				if settings.aoe[slot] and party[slot].name == targ.name then
+				if settings.aoe[slot] and party[slot] and party[slot].name == targ.name then
 					song_timers.delete(song,'AoE')
 				end
 			end
@@ -247,9 +247,8 @@ function song_timers.adjust(spell_name,targ,buffs)
 end
 
 function check_dummy(targ)
-	local count = false
 	for k,v in pairs (timers[targ]) do
-		if setting.dummy[k] then
+		if setting.dummy:find(k) then
 			return true
 		end
 	end
